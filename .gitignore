@@ -1,0 +1,14 @@
+*.csv
+*.tsv
+*.fasta
+*.fa
+*.fastq*
+*.bam
+*.txt
+results/
+data/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
+slurm-*.out
