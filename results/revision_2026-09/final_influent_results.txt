@@ -1,0 +1,99 @@
+========== 0. 进水样本 ==========
+进水样本数 (有 RGI 结果): 101
+国家数: 22   未知国家的样本: 0
+
+========== 1. 移动率 (进水) ==========
+  RGI 默认             hits  26666  样本 101  移动率  11.9 (95CI 11.0 到 12.8)  每样本中位数 12.5 (IQR 9.1 到 15.4)
+  RGI id>=80         hits   8923  样本 100  移动率  24.9 (95CI 23.9 到 26.1)  每样本中位数 24.7 (IQR 21.1 到 29.4)
+  ResFinder 90/60    hits   6607  样本 102  移动率  27.7 (95CI 26.4 到 29.1)  每样本中位数 27.9 (IQR 24.0 到 32.7)
+
+  一致性阈值扫描 (RGI, 仅同源模型):
+    >=  0: hits  25557  移动率  11.8  糖肽类占比  42.5
+    >= 50: hits  11574  移动率  22.2  糖肽类占比   4.0
+    >= 60: hits  10425  移动率  23.3  糖肽类占比   1.4
+    >= 70: hits   9497  移动率  24.3  糖肽类占比   0.9
+    >= 80: hits   8923  移动率  24.9  糖肽类占比   0.7
+    >= 90: hits   7855  移动率  26.7  糖肽类占比   0.2
+    >= 95: hits   6962  移动率  28.4  糖肽类占比   0.1
+
+========== 2. 糖肽类占比 (进水) ==========
+  RGI 默认             40.7
+  RGI id>=80         0.7
+  ResFinder 90/60    0.0
+  RGI 默认中糖肽类 hits 10854, 一致性中位数 35.5
+  前 5 个糖肽类基因:
+Best_Hit_ARO
+vanT gene in vanG cluster    3254
+vanW gene in vanI cluster    2604
+vanY gene in vanB cluster    1760
+vanY gene in vanM cluster     567
+vanG                          518
+  ARGs-OAP (reads, 100 个进水样本) vancomycin 合并占比: 0.15
+
+========== 3. 药物类别: RGI id>=80 (进水) ==========
+  Phenicol         n=  273  移动率  34.4  Wilson 29.0 到 40.2
+  Macrolide/MLS    n= 1468  移动率  34.3  Wilson 31.9 到 36.8
+  Fluoroquinolone  n=  451  移动率  31.7  Wilson 27.6 到 36.1
+  Tetracycline     n= 1255  移动率  31.3  Wilson 28.8 到 33.9
+  Sulfonamide      n=  361  移动率  28.0  Wilson 23.6 到 32.8
+  Aminoglycoside   n= 1244  移动率  26.5  Wilson 24.1 到 29.1
+  Beta-lactam      n= 1422  移动率  19.5  Wilson 17.5 到 21.6
+  Glycopeptide     n=   60  移动率  15.0  Wilson 8.1 到 26.1
+  Multidrug        n= 1350  移动率   9.6  Wilson 8.2 到 11.3
+  聚类 logistic 回归 (参照 Tetracycline):
+    Aminoglycoside   OR  0.79  95CI 0.67 到 0.94  p=0.00748
+    Beta-lactam      OR  0.53  95CI 0.44 到 0.63  p=1.84e-12
+    Fluoroquinolone  OR  1.02  95CI 0.76 到 1.36  p=0.902
+    Glycopeptide     OR  0.39  95CI 0.18 到 0.83  p=0.0141
+    Macrolide/MLS    OR  1.15  95CI 0.99 到 1.33  p=0.0646
+    Multidrug        OR  0.23  95CI 0.18 到 0.30  p=2.58e-28
+    Phenicol         OR  1.15  95CI 0.86 到 1.54  p=0.335
+    Sulfonamide      OR  0.85  95CI 0.66 到 1.10  p=0.225
+  联合 Wald: chi2=375.2, df=8, p=3.71e-76
+
+========== 3. 药物类别: ResFinder 90/60 (进水) ==========
+  Tetracycline     n= 1231  移动率  36.7  Wilson 34.1 到 39.4
+  Sulfonamide      n=  374  移动率  32.9  Wilson 28.3 到 37.8
+  Phenicol         n=  324  移动率  31.2  Wilson 26.4 到 36.4
+  Aminoglycoside   n= 1051  移动率  26.8  Wilson 24.2 到 29.6
+  Macrolide/MLS    n= 1473  移动率  26.0  Wilson 23.8 到 28.3
+  Fluoroquinolone  n=  179  移动率  25.7  Wilson 19.9 到 32.6
+  Beta-lactam      n=  575  移动率  25.4  Wilson 22.0 到 29.1
+  Glycopeptide     n=    1  移动率   0.0  Wilson 0.0 到 79.3  (n<30)
+  聚类 logistic 回归 (参照 Tetracycline):
+    Aminoglycoside   OR  0.63  95CI 0.54 到 0.75  p=5.94e-08
+    Beta-lactam      OR  0.59  95CI 0.47 到 0.74  p=4.39e-06
+    Fluoroquinolone  OR  0.60  95CI 0.41 到 0.87  p=0.00815
+    Macrolide/MLS    OR  0.61  95CI 0.52 到 0.71  p=1.99e-10
+    Phenicol         OR  0.78  95CI 0.60 到 1.02  p=0.0724
+    Sulfonamide      OR  0.84  95CI 0.66 到 1.08  p=0.186
+  联合 Wald: chi2=59.6, df=6, p=5.43e-11
+
+========== 4. 宿主 (进水) ==========
+  RGI 默认             宿主分配率  22.9  宿主 hits  6118  肠杆菌科 L2  19.3 L3  56.4  Escherichia L2  14.9 L3  48.9
+  RGI id>=80         宿主分配率  15.3  宿主 hits  1367  肠杆菌科 L2  66.2 L3  67.0  Escherichia L2  53.6 L3  57.6
+  ResFinder 90/60    宿主分配率   4.9  宿主 hits   322  肠杆菌科 L2  16.1 L3  16.1  Escherichia L2   9.3 L3   9.8
+
+  RGI id>=80 中 Escherichia hits 733, 其中外排泵 652
+  去掉多药类和外排泵: 宿主 hits 443, 肠杆菌科 L2 25.7, L3 32.4
+  ResFinder 90/60 进水前 10 个宿主属:
+genus
+Escherichia       30
+Phocaeicola       28
+Bacteroides_I     22
+Streptococcus     14
+Flavobacterium    12
+Klebsiella        10
+Aeromonas          9
+JAGOYM01           8
+Propionivibrio     7
+CTSOIL-112         7
+
+========== 5. 检出位点重叠 (进水) ==========
+  ResFinder 90/60 中与 RGI 默认重叠: 72.3
+  RGI id>=80 中与 ResFinder 90/60 重叠: 53.9
+
+========== 6. 附录: 出水 (描述性, 不与进水作推断比较) ==========
+  RGI 默认             hits   8439  样本  61  移动率   9.9 (95CI 8.6 到 11.3)  每样本中位数 9.6 (IQR 6.2 到 13.8)
+  RGI id>=80         hits   1831  样本  61  移动率  29.9 (95CI 27.6 到 32.3)  每样本中位数 29.8 (IQR 21.4 到 35.5)
+  ResFinder 90/60    hits   1637  样本  61  移动率  31.2 (95CI 28.3 到 34.5)  每样本中位数 30.3 (IQR 24.2 到 39.1)
